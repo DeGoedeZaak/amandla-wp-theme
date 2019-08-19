@@ -3,4 +3,32 @@
  * Description: Starter Theme to use with Timber
  * Author: Upstatement and YOU!
 */
-h1{font-size:20px;}
+.team_title_img {
+    width: 18%;
+    float: left;
+    margin-right: 5%;
+}
+.team_des_detail {
+    width: 77%;
+    float: left;
+}
+.team_detail {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.funded_detail ul{
+	padding: 0;
+    margin: auto;
+    text-align: center;
+}
+.funded_detail ul li {
+    list-style: none;
+    width: 32.33%;
+    display: inline-block;
+    padding: 20px 20px;
+}
+.funded_detail ul li img{    
+	object-fit: cover;
+    height: 100px;
+}

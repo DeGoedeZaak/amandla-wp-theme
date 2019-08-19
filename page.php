@@ -22,6 +22,7 @@
  */
 
 $context = Timber::context();
+$context['page_sub_title'] =  get_field('page_sub_title');
 
 $timber_post = new Timber\Post();
 $context['post'] = $timber_post;

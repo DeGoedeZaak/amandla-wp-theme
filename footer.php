@@ -19,3 +19,13 @@ $timberContext['content'] = ob_get_contents();
 ob_end_clean();
 $templates = array( 'page-plugin.twig' );
 Timber::render( $templates, $timberContext );
+
+
+/*$context = Timber::context();
+
+$context['footer_data'] = Timber::get_widgets('footer-text-widget'); echo $context['footer_data'];
+$templates = array( 'footer.twig' );
+
+Timber::render( $templates, $context );
+
+*/

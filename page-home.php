@@ -33,6 +33,15 @@ $context['home_donation_btn_title'] =  get_field('home_donation_btn_title');
 $context['home_donation_link'] =  get_field('home_donation_link');
 $context['latest_news_title'] =  get_field('latest_news_title');
 
+$query = array(
+    'post_type'        => 'post',
+    'post_status'      => 'publish',
+	'orderby'          => 'date',
+	'order'            => 'DESC',
+	'showposts'		   => 3 
+);
+
+ $context['latest_post']  = Timber::get_posts( $query );
 
 $timber_post = new Timber\Post();
 $context['post'] = $timber_post;

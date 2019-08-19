@@ -75,7 +75,11 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
+		$profile_pic = get_theme_mod('logo_image_c'); 
+		$image_profile = wp_get_attachment_image_src( $profile_pic, array('300','300'),'true' );
+		$context['headerlogo'] = $image_profile[0];
 		$context['foo'] = 'bar';
+		$context['footer_widget'] = Timber::get_widgets('footer-text-widget');
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
 		$context['menu'] = new Timber\Menu();
@@ -194,24 +198,10 @@ function tcx_register_theme_customizer( $wp_customize ) {
     'mime_type' => 'image',
 ) ) );
 
-$wp_customize->add_section('page_heading_section', array(
-	  'title'          => 'Page Heading section'
-	 ));
-	//adding setting for footer text area
-	$wp_customize->add_setting('page_head', array(
-	 'default'        => '',
-	 ));
-	
-	
-	$wp_customize->add_control( 'page_head', array(
-    'label' => __( 'Page Heading Here' ),
-    'section' => 'page_heading_section',
-    'type' => 'text',
-)  );
 
-$wp_customize->add_section('video_section', array(
-	  'title'          => 'Video section'
-	 ));
+	
+	
+
 	//adding setting for footer text area
 	/*$wp_customize->add_setting('video', array(
 	 'default'        => '',
@@ -228,15 +218,7 @@ $wp_customize->add_section('video_section', array(
 	  'sanitize_callback' => 'themeslug_sanitize_url',
 	) );
 	
-	$wp_customize->add_control( 'themeslug_url_setting_id', array(
-	  'type' => 'url',
-	  'section' => 'video_section', // Add a default or your own section
-	  'label' => __( 'viemo Video URL' ),
-	  'description' => __( 'This is a video url input.' ),
-	  'input_attrs' => array(
-		'placeholder' => __( 'http://www.google.com' ),
-	  ),
-	) );
+	
 	
 	function themeslug_sanitize_url( $url ) {
 	  return esc_url_raw( $url );
@@ -254,19 +236,7 @@ $wp_customize->add_section('video_section', array(
 	 ));
 	
 	
-	$wp_customize->add_control('content_title', array(
-    'label' => __( 'Content Title Here' ),
-    'section' => 'video_section',
-    'type'  =>'text'
 	
-	)  );
-
-	$wp_customize->add_control('content', array(
-		'label' => __( 'Content Here' ),
-		'section' => 'video_section',
-		'type'  =>'textarea'
-		
-	)  );
 
 
 
@@ -353,20 +323,13 @@ $wp_customize->add_setting('multi_field', array(
 
 
 
-	$wp_customize->add_section('copyright_text', array(
-	  'title'          => 'Copyright Text'
-	 ));
 	//adding setting for footer text area
 	$wp_customize->add_setting('site_info', array(
 	 'default'        => '',
 	 ));
 	
 	
-	$wp_customize->add_control( 'site_info', array(
-    'label' => __( 'Copy Right Text' ),
-    'section' => 'copyright_text',
-    'type' => 'text',
-	));
+	
 
 $wp_customize->remove_section( 'colors' );
 $wp_customize->remove_section( 'background_image' );
@@ -391,9 +354,9 @@ function wpdocs_theme_slug_widgets_init() {
     ) );
 	
 	register_sidebar( array(
-        'name'          => __( 'Main Sidebar 3', 'textdomain' ),
-        'id'            => 'sidebar-2',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+        'name'          => __( 'Footer Widget', 'textdomain' ),
+        'id'            => 'footer-text-widget',
+        'description'   => __( 'Footer context html', 'textdomain' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
