@@ -32,3 +32,13 @@
 	object-fit: cover;
     height: 100px;
 }
+.excerpt-image.campaign_post_img img{
+	width: 100%;
+    object-fit: cover;
+    height: 300px;
+}
+.footer_w_custo li{list-style:none;}
+.twiiter_home{
+	overflow-y: auto;
+    height: 500px;
+}
