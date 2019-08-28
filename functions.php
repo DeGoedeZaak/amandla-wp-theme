@@ -79,6 +79,8 @@ class StarterSite extends Timber\Site {
 		$image_profile = wp_get_attachment_image_src( $profile_pic, array('300','300'),'true' );
 		$context['headerlogo'] = $image_profile[0];
 		$context['foo'] = 'bar';
+		$context['footer_logo'] = Timber::get_widgets('footer-logo');
+		$context['footer_donation_logo'] = Timber::get_widgets('footer-donation-logo');
 		$context['footer_widget'] = Timber::get_widgets('footer-text-widget');
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
@@ -353,9 +355,30 @@ function wpdocs_theme_slug_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 	
+	
 	register_sidebar( array(
-        'name'          => __( 'Footer Widget', 'textdomain' ),
+        'name'          => __( 'Footer Widget logo', 'textdomain' ),
+        'id'            => 'footer-logo',
+        'description'   => __( 'Footer logo', 'textdomain' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+	
+	register_sidebar( array(
+        'name'          => __( 'Footer Widget text', 'textdomain' ),
         'id'            => 'footer-text-widget',
+        'description'   => __( 'Footer context html', 'textdomain' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+	
+	register_sidebar( array(
+        'name'          => __( 'Footer Widget image', 'textdomain' ),
+        'id'            => 'footer-donation-logo',
         'description'   => __( 'Footer context html', 'textdomain' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',

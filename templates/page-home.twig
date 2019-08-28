@@ -8,7 +8,14 @@
 				<h2 class="text_center_a">{{ home_top_title }}</h2>
 				<div class="container_home_top_sub">
 					<div class="left-column-home">
-						<div class="container"><img src="{{ home_top_image }}" alt="" /></div>
+						<div class="container">
+							<img src="{{ home_top_image }}" alt="" />
+							{% if home_top_image !=""%}
+							   <img src="{{ home_top_image }}" alt="" />
+							{%else%}							   
+							   <img src="{{ site.theme.link }}/images/amandla-phone-img-new.png" alt="" />
+							{%endif%}
+						</div>
 					</div>
 					<div class="right-column-home">
 						{{ home_top_description }}
@@ -25,7 +32,51 @@
 		  <div class="Latest_campaigns_home featured-campaign home2_campaignslist">
 			<h2 class="latest_campaingn_title"><a  href="/campaigns">{{ latest_campaigns_title }}</a></h2>
 			<ul class="homepage_excerpt-list">
+				<!-- campaign_post -->
+				{% for homepage_excerpt in campaign_post %}
+					
+					<li>
+						<div class="row-fluid">
+							<div class="excerpt-content span12">
+								<div class="excerpt-image campaign_post_img">
+									<a href="{{ homepage_excerpt.url }}">
+										<img  src="{{ homepage_excerpt.image }}">
+									</a>
+								</div>
+								<div class="detail_Latest-main">
+									<div class="detail_Latest_campaigns">
+										<span><a href="{{ homepage_excerpt.url }}">{{ homepage_excerpt.post_title }}</a></span>              
+										<p>{{ homepage_excerpt.post_content |striptags| truncate(40)}}</p>          
+
+										{% if homepage_excerpt.max_actions !='' %}
+										
+											<div class="bar-goal">{{ homepage_excerpt.max_actions}} signatures required</div>
+
+											<div class="progress progress_Latest_campaigns">
+												<div class="bar bar-success success_Latest_campaigns" style="width: {{ homepage_excerpt.actions*100 / homepage_excerpt.max_actions}}%;">     
+												{% if homepage_excerpt.actions < 2 %}
+													<div class="bar-text text_Latest_campaigns">JUST STARTED</div>
+												{% else %}
+													<div class="bar-text text_Latest_campaigns">{{ homepage_excerpt.actions}} SIGNATURES</div>
+												{% endif %}
+												</div>
+											</div>
+										{% endif %}
+
+										<div class="excerpt-support-link">
+											<a class="desktop-visible" href="{{ homepage_excerpt.url }}">SIGN NOW</a>
+											<a class="mobile-visible" href="{{ homepage_excerpt.url }}#sidescroll">SIGN NOW</a>
+										</div>
+
+
+									</div>    
+								</div>  
+							</div>
+						</div>
+					</li>	
 				
+				{% endfor %}
+				<!-- END campaign_post -->
 			</ul>
 		  </div>    
 	  </div>

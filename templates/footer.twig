@@ -1,9 +1,30 @@
 	<div class="row-fluid" id="top-footer-row">
 	</div>
 	<div class="row-fluid" id="bottom-footer-row">
-		<div class="width-container">
+		<div class="width-container footer_w_custo">
+		
+		  <div class="footer_logo_i">
+			<a href="/">
+				{% if footer_logo !=""%}
+					{{footer_logo}}
+				{%else%}	
+					<img id="logo" src="{{ site.theme.link }}/images/footer_logo.png" alt="" />
+				{%endif%}	
+			</a>
+		</div>
 		
 		  {{footer_widget}}
+		  
+		  
+		<div class="card_via_images_credit">
+			{% if footer-donation-logo !=""%}
+					{{footer-donation-logo}}
+				{%else%}	
+					<img id="logo" src="{{ site.theme.link }}/images/amandla_donation_logos.png" alt="" />
+			{%endif%}
+		</div>
+		  
+		  
 		<!--	<div class="footer_logo_i">
 				<a href="/"><img id="logo" src="https://amandla.local/app/uploads/2019/08/footer_logo.png" alt=""></a>
 			</div>
