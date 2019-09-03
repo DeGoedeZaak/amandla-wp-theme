@@ -14,7 +14,7 @@ $context['board_title'] =  get_field('board_title');
 $context['board'] = get_field('board');
 
 $context['funded_detail'] =  get_field('funded_detail');
-$context['logo'] = get_field('logo');
+$context['logo_funded'] = get_field('logo');
 
 $timber_post = new Timber\Post();
 $context['post'] = $timber_post;

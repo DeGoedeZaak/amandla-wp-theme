@@ -23,41 +23,18 @@
 								<p><span style="text-decoration: underline;"><strong>{{team_title}}</strong></span></p>
 							</div>
 							<!-- team -->
-							<div class="team_section_about team_s">
-								{% for team_get in team %}
+							<div class="team_section_about team_s">							
 								
-									<div class="team_detail">
-										<div class="team_title_img">
-											<div><strong><span class="il">{{team_get.user_name}}</span></strong></div>
-											<p><img src="{{team_get.user_image}}" alt=""></p>
-										</div>
-										<div class="team_des_detail">
-											<div><strong><span class="il">{{team_get.user_position}}</span></strong></div>
-											{{team_get.description}}
-										</div>
-									</div> 
-								  
-								{% endfor %}
+								{{team}}
 							
 							</div>
 							
 							<!-- board -->
 							<div class="team_section_about board_s">
 							    <p><span style="text-decoration: underline;"><strong>{{board_title}}</strong></span></p>
-								{% for board_get in board %}
 								
-									<div class="team_detail">
-										<div class="team_title_img">
-											<div><strong><span class="il">{{board_get.board_user_name}}</span></strong></div>
-											<p><img src="{{board_get.board_user_image}}" alt=""></p>
-										</div>
-										<div class="team_des_detail">
-											<div><strong><span class="il">{{board_get.board_user_position}}</span></strong></div>
-											{{board_get.board_description}}
-										</div>
-									</div> 
-								  
-								{% endfor %}
+								{{board}}	
+								
 							
 							</div>
 							
@@ -65,17 +42,9 @@
 								{{funded_detail}}
 							    
 								<ul>
-								   {% for logo_get in logo %}
-										<li>
-									    {%if logo_get.logo_link !=""%}
-											<a href="{{logo_get.logo_link}}">
-												<img src="{{logo_get.logo_image}}" alt="">
-											</a>
-											{%else%}
-												<img src="{{logo_get.logo_image}}" alt="">
-										{%endif%}
-										</li>
-								   {% endfor %}
+								   
+								   {{logo_funded}}
+								   
 								</ul>
 								
 								
