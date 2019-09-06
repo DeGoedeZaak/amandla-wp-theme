@@ -42,3 +42,32 @@
 	overflow-y: auto;
     height: 500px;
 }
+#polylang-2 label.screen-reader-text{display:none;}
+#polylang-2{ border-left: 1px solid #cccccc;}
+#lang_choice_polylang-2{
+	color: #222222;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 20px;
+    height: 84px;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    background-color: transparent;
+    line-height: 84px;
+    border: none;
+	}
+.blog{
+    padding-top: 20px;
+}
+#topnav>li.last_pip_remove:after{
+    content:" " !important;
+}
+:lang(zu) #topnav>li a {
+   font-size: 17px;
+}
+:lang(zu) nav li a, :lang(zu) .subnav li a {   
+    padding: 0 10px;
+}
+

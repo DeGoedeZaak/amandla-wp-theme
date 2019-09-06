@@ -84,8 +84,12 @@ class StarterSite extends Timber\Site {
 		$context['footer_widget'] = Timber::get_widgets('footer-text-widget');
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
-		$context['menu'] = new Timber\Menu();
+		
+		$active_lang = pll_current_language();
+		
+		$context['menu'] = new Timber\Menu('menu_'.$active_lang);
 		$context['site'] = $this;
+		$context['languages_drop'] = Timber::get_widgets('sidebar-1');
 		return $context;
 	}
 
@@ -389,7 +393,16 @@ function wpdocs_theme_slug_widgets_init() {
 add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );
 
 
+function register_theme_menus() {
 
+    register_nav_menus(
+        array(
+            'primary-menu'  => __( 'Primary Menu', 'treehouse-portfolio' )          
+        )
+    );
+
+}
+add_action( 'init', 'register_theme_menus' );
 
 
 
