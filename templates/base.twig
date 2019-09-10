@@ -21,7 +21,7 @@
 			{% block header %}
 					<a class="logo_main_hader hdr-logo" href="{{site.url}}">
 					   {%if headerlogo !=""%}
-						<img id="logo" src="{{headerlogo}}">
+						<img id="logo" src="{{headerlogo}}" alt="logo">
 					   {%else%}	
 						{{site.name}}
 					   {%endif%}
@@ -30,7 +30,7 @@
 					<!--<h1 class="hdr-logo" role="banner">
 						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>-->
-					<nav id="menu" role="navigation" class="nav_menu_n">
+					<nav id="menu" class="nav_menu_n">
                            <input type="checkbox" id="mobile_menu_free">
 						<label class="mobile_menu_free_label" for="mobile_menu_free">MENU <span class="caret"></span></label>
 						{% include "menu.twig" with {'items': menu.get_items} %}

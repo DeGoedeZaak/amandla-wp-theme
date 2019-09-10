@@ -30,7 +30,7 @@
 	<div class="twocolumn-container clearfix home2_campaignslist">  
 	  <div class="main width-container">
 		  <div class="Latest_campaigns_home featured-campaign home2_campaignslist">
-			<h2 class="latest_campaingn_title"><a  href="/campaigns">{{ latest_campaigns_title }}</a></h2>
+			<h2 class="latest_campaingn_title"><a target="" href="/campaigns">{{ latest_campaigns_title }}</a></h2>
 			<ul class="homepage_excerpt-list">
 				<!-- campaign_post -->
 				{% for homepage_excerpt in campaign_post %}
@@ -39,13 +39,13 @@
 						<div class="row-fluid">
 							<div class="excerpt-content span12">
 								<div class="excerpt-image campaign_post_img">
-									<a href="{{ homepage_excerpt.url }}">
-										<img  src="{{ homepage_excerpt.image }}">
+									<a target="" href="{{ homepage_excerpt.url }}">
+										<img src="{{ homepage_excerpt.image }}" alt="" >
 									</a>
 								</div>
 								<div class="detail_Latest-main">
 									<div class="detail_Latest_campaigns">
-										<span><a href="{{ homepage_excerpt.url }}">{{ homepage_excerpt.post_title }}</a></span>              
+										<span><a target="" href="{{ homepage_excerpt.url }}">{{ homepage_excerpt.post_title }}</a></span>              
 										<p>{{ homepage_excerpt.post_content |striptags| truncate(40)}}</p>          
 
 										{% if homepage_excerpt.max_actions !='' %}
@@ -64,8 +64,8 @@
 										{% endif %}
 
 										<div class="excerpt-support-link">
-											<a class="desktop-visible" href="{{ homepage_excerpt.url }}">SIGN NOW</a>
-											<a class="mobile-visible" href="{{ homepage_excerpt.url }}#sidescroll">SIGN NOW</a>
+											<a target="" class="desktop-visible" href="{{ homepage_excerpt.url }}">SIGN NOW</a>
+											<a target="" class="mobile-visible" href="{{ homepage_excerpt.url }}#sidescroll">SIGN NOW</a>
 										</div>
 
 
@@ -106,7 +106,7 @@
 	  <div class="community_set_up">     
 		{{ campaign_text_title }}
 		   <div class="excerpt-Campaign-link">
-			 <a href="{{ campaign_btn_link_mobile }}">{{ campaign_btn_text_mobile }}</a>
+			 <a target="" href="{{ campaign_btn_link_mobile }}">{{ campaign_btn_text_mobile }}</a>
 		   </div>
 	  </div>  
 	  </div>
@@ -118,7 +118,7 @@
 	  <div class="community_set_up">
 		  <h2>{{ campaign_text_title }}</h2>
 		   <div class="excerpt-Campaign-link">
-			 <a href="{{ campaign_btn_link }}">{{ campaign_btn_text }} >></a>
+			 <a target="" href="{{ campaign_btn_link }}">{{ campaign_btn_text }} >></a>
 		   </div>
 	  </div>  
 	  </div>
@@ -129,7 +129,7 @@
 	  <div class="community_set_up donation_text_home_page">     
 		    {{ home_donation_text }}
 		   <div class="excerpt-Campaign-link btn_donate_view_link">
-			 <a href="{{ home_donation_link }}">{{ home_donation_btn_title }}</a>
+			 <a target="" href="{{ home_donation_link }}">{{ home_donation_btn_title }}</a>
 		   </div>
 	  </div>  
 	  </div>
@@ -139,7 +139,7 @@
 
 	<div class="twocolumn-container clearfix Latest-News-main-home">
 		<div class="main width-container">
-			<h2 class="Latest_News_title"><a  href="/blog">{{ latest_news_title }}</a></h2>
+			<h2 class="Latest_News_title"><a target="" href="/blog">{{ latest_news_title }}</a></h2>
 			<div class="Latest_News_main">
 				
 				<!-- blog -->
@@ -170,7 +170,7 @@
 				</div>
 				<div class="follow_btn">
 					<div class="twiiter_home">                     
-						<a class="twitter-timeline" href="https://twitter.com/amandlamobi" data-widget-id=""><img src="follow_Tweets_img.png"/></a>
+						<a class="twitter-timeline" href="https://twitter.com/amandlamobi" data-widget-id=""><img src="follow_Tweets_img.png" alt="" ></a>
 					</div>
 				</div>      
 			</div>
