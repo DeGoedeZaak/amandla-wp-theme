@@ -35,7 +35,9 @@
 						<label class="mobile_menu_free_label" for="mobile_menu_free">MENU <span class="caret"></span></label>
 						{% include "menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
-				
+				   <div class="menu-link-lan">
+						    {{languages_drop_mobile}}
+                        </div>
 			{% endblock %}
 			
 			

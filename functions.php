@@ -90,6 +90,7 @@ class StarterSite extends Timber\Site {
 		$context['menu'] = new Timber\Menu('menu_'.$active_lang);
 		$context['site'] = $this;
 		$context['languages_drop'] = Timber::get_widgets('sidebar-1');
+		$context['languages_drop_mobile'] = Timber::get_widgets('menu_lan_swi');		
 		return $context;
 	}
 
@@ -349,6 +350,18 @@ add_action( 'customize_register', 'tcx_register_theme_customizer' );
  * Add a sidebar.
  */
 function wpdocs_theme_slug_widgets_init() {
+	
+	
+	register_sidebar( array(
+        'name'          => __( 'language switcher menu', 'textdomain' ),
+        'id'            => 'menu_lan_swi',
+        'description'   => __( 'language switcher menu in mobile.', 'textdomain' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+	
     register_sidebar( array(
         'name'          => __( 'Main Sidebar', 'textdomain' ),
         'id'            => 'sidebar-1',

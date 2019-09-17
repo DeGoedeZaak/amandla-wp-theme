@@ -43,6 +43,7 @@
     height: 500px;
 }
 #polylang-2 label.screen-reader-text{display:none;}
+#polylang-3 label.screen-reader-text{display:none;}
 #polylang-2{ border-left: 1px solid #cccccc;}
 #lang_choice_polylang-2{
 	color: #222222;
@@ -58,6 +59,18 @@
     line-height: 84px;
     border: none;
 	}
+#lang_choice_polylang-3{
+	color: #222222;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding:7px 0;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+	}	
 .blog{
     padding-top: 20px;
 }
@@ -70,4 +83,28 @@
 :lang(zu) nav li a, :lang(zu) .subnav li a {   
     padding: 0 10px;
 }
+:lang(xho) #topnav>li a {
+   font-size: 17px;
+}
+:lang(xho) nav li a, :lang(xho) .subnav li a {   
+    padding: 0 10px;
+}
+:lang(tsn) #topnav>li a {
+   font-size: 18px;
+}
+:lang(tsn) nav li a, :lang(tsn) .subnav li a {   
+    padding: 0 12px;
+}
+
+
+
+@media only screen and (max-device-width: 1024px){
+ #polylang-2{display:none;}
+}
+@media only screen and (max-width: 460px){
+	#lang_choice_polylang-3 {
+		padding: 5px 0 5px 5px;
+		font-size: 14px;
+	}
+}	
 
