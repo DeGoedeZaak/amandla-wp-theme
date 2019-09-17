@@ -86,6 +86,12 @@ class StarterSite extends Timber\Site {
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
 		
 		$active_lang = pll_current_language();
+		if($active_lang == 'en')
+		{
+			$context['lang'] = '';
+		}else{
+			$context['lang'] = $active_lang;
+		}	
 		
 		$context['menu'] = new Timber\Menu('menu_'.$active_lang);
 		$context['site'] = $this;
