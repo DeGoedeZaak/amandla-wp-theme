@@ -44,7 +44,30 @@
 }
 #polylang-2 label.screen-reader-text{display:none;}
 #polylang-3 label.screen-reader-text{display:none;}
-#polylang-2{ border-left: 1px solid #cccccc;}
+#polylang-3	{position: relative;}
+#polylang-2{ border-left: 1px solid #cccccc;position: relative;}
+li#polylang-2:after {
+    content: "";    
+    vertical-align: middle;
+    border-top: 8px solid;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    color: #000;
+    top: 39px;
+    position: absolute;
+    right: 0px;
+}
+li#polylang-3:after {
+    content: "";    
+    vertical-align: middle;
+    border-top: 8px solid;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    color: #000;
+    top: 14px;
+    position: absolute;
+    right: 3px;
+}
 #lang_choice_polylang-2{
 	color: #222222;
     font-size: 20px;
@@ -58,18 +81,24 @@
     background-color: transparent;
     line-height: 84px;
     border: none;
+	-webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 	}
 #lang_choice_polylang-3{
 	color: #222222;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    padding:7px 0;
+    padding:7px 6px;
     display: inline-block;
     margin: 0px;
     position: relative;
     background-color: transparent;
     border: none;
+	-webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 	}	
 .blog{
     padding-top: 20px;
@@ -122,7 +151,7 @@
 @media only screen and (max-width: 1170px){
 	#lang_choice_polylang-2{
 		font-size: 14px;
-		padding: 0 0 0 6px;
+		padding: 0 15px 0 6px;
 	}
 	:lang(zu) #topnav>li a {
 		font-size: 14px;
@@ -168,7 +197,7 @@
 	:lang(zu).logo_main_hader img#logo{width: 170px;}
 	#lang_choice_polylang-2{
 		font-size: 12px;
-		padding: 0 0 0 3px;
+		padding: 0 10px 0 3px;
 	}
 	:lang(tsn) #topnav>li a{
 		font-size: 10px;
@@ -212,6 +241,11 @@
 	#lang_choice_polylang-3 {
 		padding: 5px 0 5px 5px;
 		font-size: 14px;
+	}
+	li#polylang-3:after{
+		border-top: 4px solid;
+		border-right: 4px solid transparent;
+		border-left: 4px solid transparent;
 	}
 }
 @media only screen and (max-width: 385px){
