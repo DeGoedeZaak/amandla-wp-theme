@@ -229,14 +229,37 @@ li#polylang-3:after {
 }
 
 
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px){
+	iframe[src*='youtube'] {
+		display: block !important;
+	}
+}
 
 @media only screen and (max-device-width: 1024px){
- #polylang-2{display:none;}
+	#polylang-2{display:none;}
 }
 @media only screen and (max-width: 768px){
- #polylang-2{display:none;}
+	.excerpt-image.campaign_post_img img {
+		width: 100%;
+		object-fit: inherit;
+		height: auto;
+	}
+}	
+@media only screen and (max-width: 768px){
+	#polylang-2{display:none;}
+		.mobile_view .excerpt-Campaign-link {
+		padding-top: 20px !important;
+	}
 }
-
+@media only screen and (max-width: 620px){
+	iframe[src*='youtube'] {
+		width:100%;
+	    height: 277px;
+	}
+	.site-logo-hader {  
+		padding: 0px 0px 0px 12px !important;
+	}
+}
 @media only screen and (max-width: 460px){
 	#lang_choice_polylang-3 {
 		padding: 5px 12px 5px 5px;
@@ -247,11 +270,72 @@ li#polylang-3:after {
 		border-right: 4px solid transparent;
 		border-left: 4px solid transparent;
 	}
+	footer #bottom-footer-row {
+    padding: 0 0 20px !important;}
+	iframe[src*='youtube'] {
+		width:100%;
+	    height: 250px;
+	}
+	.team_title_img {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+	.team_des_detail {
+		width: 100%;
+		float: none;
+	}
 }
 @media only screen and (max-width: 385px){
 	.logo_main_hader {
 		width: 150px !important;
 	}
+	.site-logo-hader {
+		padding: 0px 0px 0px 0px !important;
+	}
 	
 }	
+@media only screen and (max-width: 350px){
+	.logo_main_hader {
+		width: 100% !important;
+		text-align: center;
+	}
+	.mobile_menu_free_label {
+		font-size: 14px !important;
+	}
+	#menu input[type="checkbox"]:checked ~ .desktop-nav {
+    top: 106px;
+	}
+	.desktop-nav {
+		top: 106px !important;
+	}
+	.mobile_menu_free_label {   
+		margin: 6px 0px 0px 3px !important;
+	}
+	.excerpt-image.campaign_post_img img {
+		object-fit: unset;
+		height: auto;
+	}
+	.latest_campaingn_title {
+		margin-bottom: 20px !important;
+		margin-top: 20px !important;
+	}
+	.home2_campaignslist .home2_campaignslist .excerpt-support-link {
+		width: 60% !important;
+	}
+	.excerpt-Campaign-link a {
+		line-height: normal !important;
+	}
+	.donate_btn {
+		padding: 8px 0px !important;
+   }
+   iframe[src*='youtube'] {
+		width:100%;
+	    height: 190px;
+	}
+	.funded_detail ul li {
+		width: 90%;
+		padding: 10px 20px;
+	}
+}
 
