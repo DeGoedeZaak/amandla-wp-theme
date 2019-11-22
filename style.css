@@ -340,6 +340,17 @@ li#polylang-3:after {
 	.Latest_campaigns_list ul {
 		display: block !important;
 	}
+	 .bar-text.text_Latest_campaigns
+	 {
+		padding-left: 10px;
+		word-break: break-all;
+	   font-size: 10px;
+	}
+	li#polylang-3:after {
+		border-top: 0px solid;
+		border-right: 0px solid transparent;
+		border-left: 0px solid transparent;
+   }
 }
 
 @media only screen and (max-width: 193px){
