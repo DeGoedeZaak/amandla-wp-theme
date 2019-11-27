@@ -342,9 +342,9 @@ li#polylang-3:after {
 	}
 	 .bar-text.text_Latest_campaigns
 	 {
-		padding-left: 10px;
+		padding-left: 10px !important;
 		word-break: break-all;
-	   font-size: 10px;
+	    font-size: 10px !important;
 	}
 	li#polylang-3:after {
 		border-top: 0px solid;
