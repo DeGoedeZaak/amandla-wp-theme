@@ -3,142 +3,6 @@
  * Description: Starter Theme to use with Timber
  * Author: Upstatement and YOU!
 */
-#t7_timer {
-	width: 220px;
-	height: 55px;
-	position: relative
-}
-
-#t7_vals {
-	width: 100%;
-	clear: both;
-	margin: 0px auto
-}
-
-.t7_numbs {
-	font-size: 28px;
-	font-family: Arial, sans-serif;
-	font-weight: bold;
-	text-align: left;
-	color: #ffffff
-}
-
-#t7_y {
-	background-image: url(//d3n8a8pro7vhmx.cloudfront.net/assets/countdown/countdown2-ead576df5e3294581b72fb54e362962bdbe2bd989d46d457247f4fa59f8624d7.png);
-	background-repeat: no-repeat;
-	float: left;
-	width: 48px;
-	height: 35px;
-	background-color: transparent;
-	padding: 0px 0px 0px 3px;
-	margin: 1px;
-	letter-spacing: 7px
-}
-
-#t7_d {
-	background-image: url(//d3n8a8pro7vhmx.cloudfront.net/assets/countdown/countdown2-ead576df5e3294581b72fb54e362962bdbe2bd989d46d457247f4fa59f8624d7.png);
-	background-repeat: no-repeat;
-	float: left;
-	width: 48px;
-	height: 35px;
-	background-color: transparent;
-	padding: 0px 0px 0px 3px;
-	margin: 1px;
-	letter-spacing: 7px
-}
-
-#t7_h {
-	background-image: url(//d3n8a8pro7vhmx.cloudfront.net/assets/countdown/countdown2-ead576df5e3294581b72fb54e362962bdbe2bd989d46d457247f4fa59f8624d7.png);
-	background-repeat: no-repeat;
-	float: left;
-	width: 48px;
-	height: 35px;
-	background-color: transparent;
-	padding: 0px 0px 0px 3px;
-	margin: 1px;
-	letter-spacing: 7px
-}
-
-#t7_m {
-	background-image: url(//d3n8a8pro7vhmx.cloudfront.net/assets/countdown/countdown2-ead576df5e3294581b72fb54e362962bdbe2bd989d46d457247f4fa59f8624d7.png);
-	background-repeat: no-repeat;
-	float: left;
-	width: 47px;
-	height: 35px;
-	background-color: transparent;
-	padding: 0px 0px 0px 3px;
-	margin: 1px;
-	letter-spacing: 7px
-}
-
-#t7_s {
-	background-image: url(//d3n8a8pro7vhmx.cloudfront.net/assets/countdown/countdown2-nc-d5119426317e464cb45affa7d74ef38f4c8afeb32f2c1b9b0a17d213b7beae0c.png);
-	background-repeat: no-repeat;
-	float: left;
-	width: 46px;
-	height: 35px;
-	background-color: transparent;
-	padding: 0px 0px 0px 3px;
-	margin: 1px;
-	letter-spacing: 7px
-}
-
-#t7_labels {
-	width: 100%;
-	clear: both;
-	margin: 0px auto
-}
-
-.t7_labs {
-	position: relative;
-	left: -4px;
-	top: -10px;
-	font-size: 9px;
-	font-family: Verdana, Arial, sans-serif;
-	font-weight: bold;
-	text-align: center;
-	color: #333
-}
-
-#t7_yl {
-	float: left;
-	width: 51px;
-	height: 15px;
-	padding: 0px;
-	margin: 0px
-}
-
-#t7_dl {
-	float: left;
-	width: 54px;
-	height: 15px;
-	padding: 0px;
-	margin: 0px
-}
-
-#t7_hl {
-	float: left;
-	width: 45px;
-	height: 15px;
-	padding: 0px;
-	margin: 0px
-}
-
-#t7_ml {
-	float: left;
-	width: 53px;
-	height: 15px;
-	padding: 0px;
-	margin: 0px
-}
-
-#t7_sl {
-	float: left;
-	width: 46px;
-	height: 15px;
-	padding: 0px;
-	margin: 0px
-}
 
 .countdown {
 	width: 220px;
@@ -668,14 +532,6 @@ textarea[class*="span"],
 	content: '\25b4'
 }
 
-.icon-lock {
-	background: url(//d3n8a8pro7vhmx.cloudfront.net/themes/539f8fc5ebad6410b6000001/attachments/original/1410402668/icon-lock.jpg?1410402668) no-repeat left
-}
-
-.icon-lock:before {
-	content: ''
-}
-
 form {
 	padding: 0;
 	margin: 0
@@ -1180,64 +1036,6 @@ form input.error {
 	-webkit-border-radius: 3px
 }
 
-.tipsy-arrow {
-	position: absolute;
-	background: url(//d3n8a8pro7vhmx.cloudfront.net/assets/tipsy-391c714e8bc1004a7857e6a6f95f4bae9ffb0e4e91fd0e617f09fd92635b4d0e.gif) no-repeat top left;
-	width: 9px;
-	height: 5px
-}
-
-.tipsy-n .tipsy-arrow {
-	top: 0;
-	left: 50%;
-	margin-left: -4px
-}
-
-.tipsy-nw .tipsy-arrow {
-	top: 0;
-	left: 10px
-}
-
-.tipsy-ne .tipsy-arrow {
-	top: 0;
-	right: 10px
-}
-
-.tipsy-s .tipsy-arrow {
-	bottom: 0;
-	left: 50%;
-	margin-left: -4px;
-	background-position: bottom left
-}
-
-.tipsy-sw .tipsy-arrow {
-	bottom: 0;
-	left: 10px;
-	background-position: bottom left
-}
-
-.tipsy-se .tipsy-arrow {
-	bottom: 0;
-	right: 10px;
-	background-position: bottom left
-}
-
-.tipsy-e .tipsy-arrow {
-	top: 50%;
-	margin-top: -4px;
-	right: 0;
-	width: 5px;
-	height: 9px;
-	background-position: top right
-}
-
-.tipsy-w .tipsy-arrow {
-	top: 50%;
-	margin-top: -4px;
-	left: 0;
-	width: 5px;
-	height: 9px
-}
 
 table {
 	max-width: 100%;
@@ -4777,17 +4575,6 @@ body[class*="slug_report_card"] .na-row .rating {
 	font-color: #ffffff
 }
 
-.btn-start-petition {
-	display: inline-block;
-	position: relative;
-	width: 200px;
-	height: 58px;
-	margin-top: 20px;
-	background-image: url(https://d8s293fyljwh4.cloudfront.net/assets/organisations/amandla/btn-home-main-1a1ff590a947d0b05ff412b9be01f000548355e438be7f019f9639409a0b0ee0.png);
-	background-repeat: no-repeat;
-	text-decoration: none
-}
-
 .start-campaign-text {
 	position: absolute;
 	top: 17px;
@@ -4941,7 +4728,7 @@ body[class*="slug_report_card"] .na-row .rating {
 	margin: auto;
 	overflow: hidden;
 	padding-top: 40px;
-	background-image: url("//d3n8a8pro7vhmx.cloudfront.net/themes/57bc2931b928718162000001/attachments/original/1473339040/home_bg_join_img.png?1473339040")
+	background-image: url("/app/themes/amandla-wp-theme/images/home_bg_join_img.png")
 }
 
 .text_center_a {

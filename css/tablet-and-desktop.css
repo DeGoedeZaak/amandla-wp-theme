@@ -1553,17 +1553,6 @@ body[class*="slug_report_card"] .badge img {
 	font-color: #ffffff
 }
 
-.btn-start-petition {
-	display: inline-block;
-	position: relative;
-	width: 278px;
-	height: 58px;
-	margin-top: 20px;
-	background-image: url(https://d8s293fyljwh4.cloudfront.net/assets/organisations/amandla/btn-home-main-1a1ff590a947d0b05ff412b9be01f000548355e438be7f019f9639409a0b0ee0.png);
-	background-repeat: no-repeat;
-	text-decoration: none
-}
-
 .start-campaign-text {
 	position: absolute;
 	top: 15px;
