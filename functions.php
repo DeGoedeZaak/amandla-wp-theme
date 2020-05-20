@@ -84,9 +84,6 @@ class StarterSite extends Timber\Site {
 		$context['footer_widget'] = Timber::get_widgets('footer-text-widget');
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
-		$context['pl_e'] = TimberHelper::function_wrapper('pll_e');
-		$context['pl__'] = TimberHelper::function_wrapper('pll_');
-
 		
 		$active_lang = pll_current_language();
 		if($active_lang == 'en')
@@ -171,6 +168,9 @@ class StarterSite extends Timber\Site {
 	public function add_to_twig( $twig ) {
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		$twig->addFilter( new Twig_SimpleFilter( 'myfoo', array( $this, 'myfoo' ) ) );
+		$twig->addFunction( new Twig_SimpleFunction( 'pl_e', 'pl_e' ) );
+		$twig->addFunction( new Twig_SimpleFunction( 'pl__', 'pl__' ) );
+		
 		return $twig;
 	}
 	
