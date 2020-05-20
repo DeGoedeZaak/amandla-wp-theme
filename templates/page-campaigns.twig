@@ -39,22 +39,22 @@
 
 																{% if homepage_excerpt.max_actions !='' %}
 											
-																	<div class="bar-goal">{{ homepage_excerpt.max_actions}} signatures required</div>
+																	<div class="bar-goal">{{ homepage_excerpt.max_actions}} {{pl_e('signatures required')}}</div>
 
 																	<div class="progress progress_Latest_campaigns">
 																		<div class="bar bar-success success_Latest_campaigns" style="width: {{ homepage_excerpt.actions*100 / homepage_excerpt.max_actions}}%;">     
 																		{% if homepage_excerpt.actions < 2 %}
-																			<div class="bar-text text_Latest_campaigns">JUST STARTED</div>
+																			<div class="bar-text text_Latest_campaigns">{{pl_e('JUST STARTED')}}</div>
 																		{% else %}
-																			<div class="bar-text text_Latest_campaigns">{{ homepage_excerpt.actions}} SIGNATURES</div>
+																			<div class="bar-text text_Latest_campaigns">{{ homepage_excerpt.actions}} {{pl_e('SIGNATURES')}}</div>
 																		{% endif %}
 																		</div>
 																	</div>
 																{% endif %}
 
 																<div class="excerpt-support-link">
-																	<a class="desktop-visible" href="{{ homepage_excerpt.url }}">SIGN NOW</a>
-																	<a class="mobile-visible" href="{{ homepage_excerpt.url }}#sidescroll">SIGN NOW</a>
+																	<a class="desktop-visible" href="{{ homepage_excerpt.url }}">{{pl_e('SIGN NOW')}}</a>
+																	<a class="mobile-visible" href="{{ homepage_excerpt.url }}#sidescroll">{{pl_e('SIGN NOW')}}</a>
 																</div>
 
 

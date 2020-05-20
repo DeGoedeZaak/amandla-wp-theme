@@ -84,6 +84,9 @@ class StarterSite extends Timber\Site {
 		$context['footer_widget'] = Timber::get_widgets('footer-text-widget');
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
+		$context['pl_e'] = TimberHelper::function_wrapper('pll_e');
+		$context['pl__'] = TimberHelper::function_wrapper('pll_');
+
 		
 		$active_lang = pll_current_language();
 		if($active_lang == 'en')
@@ -425,3 +428,67 @@ add_action( 'init', 'register_theme_menus' );
 
 
 
+/**
+ * Outputs localized string if polylang exists or  output's not translated one as a fallback
+ *
+ * @param $string
+ *
+ * @return  void
+ */
+function pl_e( $string = '' ) {
+    if ( function_exists( 'pll_e' ) ) {
+        pll_e( $string );
+    } else {
+        echo $string;
+    }
+}
+
+/**
+ * Returns translated string if polylang exists or  output's not translated one as a fallback
+ *
+ * @param $string
+ *
+ * @return string
+ */
+function pl__( $string = '' ) {
+    if ( function_exists( 'pll__' ) ) {
+        return pll__( $string );
+    }
+
+    return $string;
+}
+
+// these function prefixes can be either you are comfortable with.
+
+
+function your_prefix_after_setup_theme() {
+
+	// register our translatable strings - again first check if function exists.
+ 
+	 if ( function_exists( 'pll_register_string' ) ) {
+ 
+		pll_register_string('Sorry, we couldn\'t find what you\'re looking for.', 'Sorry, we couldn\'t find what you\'re looking for.', 'amandla-theme', false);
+		pll_register_string('First', 'First', 'amandla-theme', false);
+		pll_register_string('Previous', 'Previous', 'amandla-theme', false);
+		pll_register_string('Next', 'Next', 'amandla-theme', false);
+		pll_register_string('Last', 'Last', 'amandla-theme', false);
+		pll_register_string('This is my archive', 'This is my archive', 'amandla-theme', false);
+		pll_register_string('Add comment', 'Add comment', 'amandla-theme', false);
+		pll_register_string('Email', 'Email', 'amandla-theme', false);
+		pll_register_string('Website', 'Website', 'amandla-theme', false);
+		pll_register_string('Your comment will be revised by the site if needed.', 'Your comment will be revised by the site if needed.', 'amandla-theme', false);
+		pll_register_string('says', 'says', 'amandla-theme', false);
+		pll_register_string('replies', 'replies', 'amandla-theme', false);
+		pll_register_string('Donate', 'Donate', 'amandla-theme', false);
+		pll_register_string('signatures required', 'signatures required', 'amandla-theme', false);
+		pll_register_string('JUST STARTED', 'JUST STARTED', 'amandla-theme', false);
+		pll_register_string('SIGNATURES', 'SIGNATURES', 'amandla-theme', false);
+		pll_register_string('SIGN NOW', 'SIGN NOW', 'amandla-theme', false);
+		pll_register_string('Read more', 'Read more', 'amandla-theme', false);
+		pll_register_string('Password', 'Password', 'amandla-theme', false);
+		pll_register_string('Submit', 'Submit', 'amandla-theme', false);
+		pll_register_string('Author Archives:', 'Author Archives:', 'amandla-theme', false);
+		pll_register_string('Unsubscribe here', 'Unsubscribe here', 'amandla-theme', false);
+	 }
+ }
+  add_action( 'after_setup_theme', 'your_prefix_after_setup_theme' );

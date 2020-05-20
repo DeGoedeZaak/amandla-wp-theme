@@ -27,7 +27,7 @@
 												</div>
 												<div class="byline">{{ post_get.post_date|date("M d, Y") }}</div>
 												<div class="blog_teaser">
-													<p>{{ post_get.post_excerpt|striptags| truncate(80)}} <a class="link-arrow" href="{{ post_get.link }}">Read more</a></p>
+													<p>{{ post_get.post_excerpt|striptags| truncate(80)}} <a class="link-arrow" href="{{ post_get.link }}">{{pl_e('Read more')}}</a></p>
 												</div>
 											</div> 										
 										</div>
